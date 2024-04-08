@@ -1,5 +1,10 @@
 <?php
     // Connect to database
+    // $servername = "app-231-server";
+    // $username = "hnwinzykdi";
+    // $password = "3L5KGOH330EM85XX$";
+    // $database = "farm_database";
+
     $servername = "localhost";
     $username = "root";
     $password = "";
