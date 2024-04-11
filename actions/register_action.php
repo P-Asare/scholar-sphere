@@ -1,13 +1,17 @@
 <?php
 
     // Endpoint to handle registration of user where the data sent is inserted
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS');
+    header('Access-Control-Max-Age: 1000');
+    header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
     include("../settings/connection.php");
 
     // set response headers
     header('Content-Type: application/json');
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'OPTIONS'){
 
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
