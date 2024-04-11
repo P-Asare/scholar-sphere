@@ -4,7 +4,7 @@
     // $username = "hnwinzykdi";
     // $password = "3L5KGOH330EM85XX$";
     // $database = "farm_database";
-
+    header('Access-Control-Allow-Origin: *');
     $servername = "localhost";
     $username = "root";
     $password = "";

@@ -2,6 +2,8 @@
 
 // Endpoint to handle login of users
 
+header('Access-Control-Allow-Origin: *');
+echo "working";
 include("../settings/connection.php");
 
 // set response headers
