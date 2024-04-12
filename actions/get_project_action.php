@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' || $_SERVER['REQUEST_METHOD'] === 'OPTI
     $data = json_decode($json, true);
 
     try {
-        // $userId = $_SESSION['user_id'];
-        $userId = 8;
+        $userId = $_SESSION['user_id'];
+        // $userId = 8;
 
         $sql = "SELECT p.id, p.title, p.description, p.createdAt, p.status
                 FROM projects p
