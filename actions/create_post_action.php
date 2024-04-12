@@ -31,6 +31,7 @@ try {
         $result = mysqli_stmt_execute($stmt);
 
         if ($result) {
+            mysqli_commit($conn);
             $response = array('success' => true, 'message' => 'Post created successfully');
             echo json_encode($response);
         } else {
