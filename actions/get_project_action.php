@@ -9,13 +9,13 @@ include("../settings/connection.php");
 
 header('Content-Type: application/json');
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' || $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
 
     try {
-        $userId = $_SESSION['user_id'];
+        $userId = $data["id"];
         // $userId = 8;
 
         $sql = "SELECT p.id, p.title, p.description, p.createdAt, p.status
