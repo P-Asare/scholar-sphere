@@ -1,7 +1,7 @@
 <?php
     // connect to database
 
-    $servername = "195.35.15.55";
+    $servername = "193.203.166.76";
     $username = "u760419072_asare";
     $password = "p@L@l19asare";
     $database = "u760419072_testing";
