@@ -1,5 +1,5 @@
-CREATE DATABASE scholarsphere;
-USE scholarsphere;
+-- CREATE DATABASE scholarsphere;
+-- USE scholarsphere;
 
 -- interests of users for linking purposes
 CREATE TABLE interests (
@@ -20,13 +20,6 @@ CREATE TABLE roles (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     role VARCHAR(255),
     description VARCHAR(255)
-);
-
--- shared documents (Google API)
-CREATE TABLE documents (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255),
-    filepath VARCHAR(255)
 );
 
 -- programs of study in the university for linking purposes
@@ -76,10 +69,8 @@ CREATE TABLE projects (
     description VARCHAR(255),
     createdAt DATETIME,
     status ENUM('in_progress', 'completed'),
-    document_id INT,
     dep_id INT,
     faculty_id INT,
-    FOREIGN KEY (document_id) REFERENCES documents(id) ON DELETE CASCADE,
     FOREIGN KEY (dep_id) REFERENCES department(id) ON DELETE CASCADE,
     FOREIGN KEY (faculty_id) REFERENCES users(id) ON DELETE CASCADE
 );

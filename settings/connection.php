@@ -1,14 +1,10 @@
 <?php
-    // Connect to database
-    // $servername = "app-231-server";
-    // $username = "hnwinzykdi";
-    // $password = "3L5KGOH330EM85XX$";
-    // $database = "farm_database";
-    header('Access-Control-Allow-Origin: *');
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "scholarsphere";
+    // connect to database
+
+    $servername = "195.35.15.55";
+    $username = "u760419072_asare";
+    $password = "p@L@l19asare";
+    $database = "u760419072_testing";
 
     $conn = new mysqli($servername, $username, $password, $database);
 

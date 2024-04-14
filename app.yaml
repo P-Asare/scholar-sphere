@@ -1,0 +1,10 @@
+runtime: php82
+
+runtime_config:
+  document_root: .
+
+env_variables:
+  CLOUDSQL_USER: root
+  CLOUDSQL_DB: scholarsphere
+  CLOUDSQL_PASSWORD: 5cdsW@@kye
+  CLOUDSQL_DSN: /cloudsql/scholarsphere-420308:us-central1:scholarsphere-420308
